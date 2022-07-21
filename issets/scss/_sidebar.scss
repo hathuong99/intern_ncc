@@ -1,0 +1,47 @@
+.sidebar {
+  width: 150px;
+  background-color: #191718;
+  height: 100vh;
+  @include mobileL() {
+    height: max-content;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__item {
+    height: 44px;
+    border-bottom: 1px solid #5c5c5c;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #5c5c5c;
+      .sidebar__link {
+        color: #ffffff;
+      }
+    }
+
+    &.active {
+      .sidebar__link {
+        color: #ffffff;
+      }
+    }
+  }
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #aaaaaa;
+    line-height: 18.75px;
+    padding-top: 14px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    text-decoration: none;
+    display: block;
+
+    @include mobileL {
+      text-align: center;
+      padding-top: 14px;
+      padding-bottom: 11px;
+      padding-left: 0;
+    }
+  }
+}
